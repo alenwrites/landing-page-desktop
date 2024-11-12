@@ -33,6 +33,8 @@ body {
     margin: 0 auto;
 }
 
+
+
 a {
     text-decoration: none;
     color: #fff;
@@ -86,118 +88,268 @@ a {
 }
 
 /* Hero Section */
-/* Hero Section */
 #hero-section {
     position: relative;
     width: 100%;
-    height: 100vh; /* Reduced by 40% */
+    /* height: 100vh;  */
     overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
     text-align: center;
-    background-color: #000; /* Black background for particles */
+    background-color: #fff; /* White background */
+    padding: 20px;
+    box-sizing: border-box;
+    color: #333; /* Dark text for contrast on white */
 }
 
+/* Center content with maximum width for responsiveness */
 .hero-content {
-    position: relative;
-    z-index: 2; /* Ensure content is above the particles */
-}
-
-pointer-particles {
-    position: absolute;
-    top: 0;
-    left: 0;
+    max-width: 1200px;
     width: 100%;
-    height: 100%;
-    z-index: 1; /* Make sure it stays behind the content */
+    padding: 20px;
 }
 
+/* Preheadline styling */
+.hero .preheadline {
+    font-size: 20px;
+    color: #ff6f61; /* Accent color */
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+/* Main headline styling */
 .hero h1 {
-    font-size: 48px;
-    margin-bottom: 20px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-size: 27px;
+    color: #333;
+    margin-bottom: 10px;
+    font-weight: 700;
 }
 
-.hero p {
+/* Subheading styling */
+.hero .subheading {
     font-size: 18px;
+    color: #666;
     margin-bottom: 30px;
 }
 
-.primary-button, .secondary-button {
-    display: inline-block;
-    padding: 15px 30px;
-    font-size: 16px;
-    border-radius: 5px;
-    margin: 5px;
-    transition: background-color 0.3s, color 0.3s;
+/* Video wrapper to make the video responsive */
+.hero-video-wrapper {
+    width: 100%;
+    max-width: 900px; /* Control width */
+    aspect-ratio: 16 / 9; /* Control aspect ratio */
+    margin: 20px auto;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+.hero-video-wrapper iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}   border: 0;
+
+
+
+
+
+/* Button container to center-align buttons and add spacing */
+.button-container {
+    display: flex;
+    justify-content: center; /* Centers buttons horizontally */
+    gap: 10px; /* Space between buttons */
+    margin-top: 20px; /* Space above buttons */
+}
+
+/* Button styling */
+.primary-button, .secondary-button {
+    display: inline-block;
+    padding: 12px 25px;
+    font-size: 16px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    color: #fff;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Primary button styling */
 .primary-button {
     background-color: #ff6f61;
-    color: #fff;
 }
 
 .primary-button:hover {
     background-color: #ff4e40;
 }
 
+/* Secondary button styling */
 .secondary-button {
-    background-color: #fff;
-    color: #333;
+    background-color: #333;
 }
 
 .secondary-button:hover {
-    background-color: #ff6f61;
-    color: #fff;
+    background-color: #555;
 }
 
+
 /* pain point */
-        .card-container {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 80px;
-        }
-        .card {
-            background-color: #f9f9f9;
-            padding: 20px;
-            border-radius: 5px;
-            text-align: center;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0,             0.1);
-            transition: transform 0.3s;
-            
-        }
-        .card img {
-            width: 50px;
-            height: 50px;
-            margin-bottom: 15px;
-        }
-        .card h3 {
-            margin-bottom: 15px;
-            font-size: 22px;
-        }
-        .card p {
-            font-size: 16px;
-            margin-bottom: 20px;
-            color: #666;
-        }
- 
-        .card:hover {
-            transform: translateY(-10px);
-        }
-        @media (max-width: 768px) {
-            .card {
-                flex: 1 1 100%; /* 1 card per row */
-                max-width: 100%;
-            }
-        }
+.pain-point-container {
+    
+    padding: 70px 0;
+    background-color: #f9f9f9; /* Set background color for section */
+}
+
+.card-container {
+    margin: 0 auto;
+    width: 90%;
+    max-width: 1200px; 
+    display: flex;
+    justify-content: space-between;
+   /* margin-bottom: 50px; */
+    flex-wrap: wrap;
+}
+
+.card {
+    text-align: center;
+    padding: 20px;
+    background-color: #ffffff; /* Set background color for cards */
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    width: 30%;
+    margin-bottom: 20px;
+}
+
+.card img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+
+.card p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #666;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+@media (max-width: 768px) {
+    .card {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}
+
+
+/* Why Choose Us? Section */
+.Why_Choose_Us {
+    background-color: #fff;
+    padding: 70px 0;
+}
+.Why_Choose_Us_container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.Why_Choose_Us h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 32px;
+}
+
+.Why_Choose_Us-steps {
+    display: flex;
+    justify-content: center; /* Centers the cards */
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.Why_Choose_Us-step {
+    text-align: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    width: 18%; /* Adjust this if needed for better alignment */
+    margin: 10px; /* Provides consistent spacing around each card */
+}
+
+
+.Why_Choose_Us-icon {
+    font-size: 40px;
+    color: #ff6f61;
+    margin-bottom: 15px;
+}
+
+.Why_Choose_Us-step h3 {
+    margin-bottom: 10px;
+    font-size: 22px;
+}
+
+.Why_Choose_Us-step p {
+    font-size: 16px;
+    color: #666;
+}
+
+
+
+.Why_Choose_Us-step:hover {
+    transform: translateY(-5px); /* Slightly reduced hover transform effect */
+}
+
+/* clientbridge section */
+
+.clientbridge img {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 15px;
+}
+
+.clientbridge {
+    background-color: #f9f9f9;
+    padding: 70px 0;
+}
+
+.clientbridge_container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto; 
+}
+.clientbridge-steps {
+     margin: 0 auto;
+    display: flex;
+    
+    justify-content: center; /* Centers the cards */
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.clientbridge-step {
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    width: 28%; /* Adjust this if needed for better alignment */
+    margin: 10px; /* Provides consistent spacing around each card */
+}
 
 
 /* Our Expertise Section */
 .our-expertise {
     padding: 80px 0;
-    background-color: #f9f9f9;
+    background-color: #fff;
 }
 
 .expertise-content {
@@ -210,7 +362,7 @@ pointer-particles {
     display: flex;
     align-items: flex-start;
     gap: 20px;
-    background-color: #fff;
+    background-color: #f9f9f9;
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
@@ -233,7 +385,7 @@ pointer-particles {
 /* About Us Section */
 .about {
     padding: 80px 0;
-    background-color: #fff;
+    background-color: #f9f9f9;
 }
 
 .about-content {
@@ -251,6 +403,8 @@ pointer-particles {
     font-weight: 600;
 }
 
+ 
+
 .founder-bio img {
     width: 150px;
     border-radius: 50%;
@@ -265,7 +419,7 @@ pointer-particles {
 
 
 
-/* Process Section */
+/* Process Section 
 .process {
     background-color: #f9f9f9;
     padding: 80px 0;
@@ -280,7 +434,7 @@ pointer-particles {
 .process-steps {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 30px; /* Added spacing between rows */
+    margin-bottom: 30px; /* Added spacing between rows 
     flex-wrap: wrap;
 }
 
@@ -291,8 +445,8 @@ pointer-particles {
     border-radius: 5px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
-    width: 30%; /* Adjust the width for better fitting */
-    margin-bottom: 20px; /* Ensure spacing when wrapping */
+    width: 30%; /* Adjust the width for better fitting 
+    margin-bottom: 20px; /* Ensure spacing when wrapping 
 }
 
 .process-icon {
@@ -315,12 +469,12 @@ pointer-particles {
     transform: translateY(-10px);
 }
 
-/* Responsive adjustments for smaller screens */
+/* Responsive adjustments for smaller screens 
 @media screen and (max-width: 768px) {
     .process-step {
-        width: 100%; /* Make each step take full width on small screens */
+        width: 100%; /* Make each step take full width on small screens 
     }
-}
+} */
 
 /* CTA Section */
 .cta {
@@ -359,63 +513,83 @@ pointer-particles {
     color: #fff;
 }
 
-/* Footer */
-/* Container for the main footer content */
+/* Footer Styles */
+.footer {
+   background-color: #222; /* Gradient background */
+    color: #fff;
+    padding: 40px 0;
+    font-family: Arial, sans-serif;
+}
+
 .footer-container {
-  display: flex;
-  justify-content: space-between;
-  padding: 20px;
-  background-color: #222;
-  color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    flex-wrap: wrap;
 }
 
-/* Left section with more space between logo and margin */
-.left-section {
-  flex: 1;
-  padding-left: 40px;
-}
-
-/* Right section with more space between links and right margin */
-.right-section {
-  flex: 1;
-  text-align: right;
-  padding-right: 40px;
-}
-
-.right-section ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.right-section li {
-  margin-bottom: 10px;
-}
-
+/* Logo Styling */
 .footer-logo img {
-    width: 150px;
-    margin-bottom: 10px;
+    width: 150px; /* Adjust as needed */
+    margin-right: 20px;
 }
 
-/* Bottom footer section for copyright */
-/* Bottom footer section for copyright */
-.bottom-footer {
-  background-color: #222;  /* Slightly darker color */
-  text-align: center;
-  padding: 10px 0;
-  color: white;
-  font-size: 14px;
-  position: relative;
+/* Navigation Links */
+.footer-nav {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1; /* Centers the navigation links */
 }
 
-/* Divider that doesn't touch the margins */
-.bottom-footer::before {
-  content: '';
-  display: block;
-  width: 90%;  /* Adjust width as needed to control the length of the divider */
-  height: 1px;
-  background-color: #444;  /* Color of the divider */
-  margin: 0 auto 15px;  /* Centers the divider and adds space below it */
+.footer-nav a {
+    color: #ccc;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 15px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.footer-nav a:hover {
+    color: #ff6f61;
+}
+
+/* Social Media Icons */
+.footer-social {
+    display: flex;
+    align-items: center;
+}
+
+.footer-social a {
+    color: #ccc;
+    font-size: 20px;
+    margin-left: 15px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-social a:hover {
+    color: #ff6f61;
+    transform: scale(1.1); /* Slightly enlarges icon on hover */
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-nav, .footer-social, .footer-logo {
+        margin-bottom: 15px;
+    }
+
+    .footer-nav a {
+        margin: 0 10px;
+    }
 }
 
 
@@ -466,252 +640,177 @@ src="https://www.facebook.com/tr?id=1732594887550385&ev=PageView&noscript=1"
     </header>  -->
 
    <!-- Hero Section -->
-    <section id="hero-section" class="hero">
-        <pointer-particles></pointer-particles>
-        <div class="hero-content">
-            <h1>Eliminate Guesswork and Drive Real Results Online</h1>
-            <p>Precision Strategies to Navigate the Digital Landscape</p>
-            <a href="https://calendly.com/contact-alenwrites/consultation-call" class="primary-button" target="_blank">Schedule a Call</a>
-            <a href="mailto:contact@alenwrites.pro" class="secondary-button">Contact Us</a>
+<section id="hero-section" class="hero">
+    <div class="hero-content">
+        <!-- Preheadline -->
+        <div class="preheadline">For Coaches, Consultants, agencies, And service-based businesses Looking to Build A Personal Brand That generates 5-10 qualified sales calls/day...</div>
+        
+        <!-- Main headline -->
+        <h1>Want Me to Build a Custom End-to-End Marketing System That Can Book You 5 to 10 Qualified Sales Calls Per Day Without Compromising Your Existing Business or Marketing Efforts?</h1>
+        
+        <!-- Subheading -->
+        <div class="subheading">
+        Watch The Video Below To Learn How I Can build the ClientBridge Framework For Your Business, Blending Content And Low-Cost Paid Ads To Turn Strangers Into Sales Calls That Show-Up, Buy, And Pay In Full — Even In Today's Trust Recession.
         </div>
-    </section>
-  <script>
-       class PointerParticle {
-  constructor(spread, speed, component) {
-    const { ctx, pointer, hue } = component;
+        
+        <!-- Responsive YouTube video embed -->
+        <div class="hero-video-wrapper">
+            <iframe 
+              
+            src="https://www.youtube.com/embed/yhWjZkd_ZQg?si=2cNgxKtuo7lY6bp7" 
+            title="YouTube video player" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" 
+            allowfullscreen>
+            </iframe>
+        </div>
+        
+        <!-- Call-to-action buttons -->
+        <a href="https://calendly.com/contact-alenwrites/consultation-call" class="primary-button" target="_blank">Schedule a Demo Call</a>
+        <a href="https://drive.google.com/drive/folders/1EAB76m9rxpw-ZTp4LQvbPhNlDWWxoqUq?usp=sharing" class="secondary-button">Download Explainer PDFs</a>
+    </div>
+</section>
 
-    this.ctx = ctx;
-    this.x = pointer.x;
-    this.y = pointer.y;
-    this.mx = pointer.mx * 0.1;
-    this.my = pointer.my * 0.1;
-    this.size = Math.random() + 1;
-    this.decay = 0.01;
-    this.speed = speed * 0.08;
-    this.spread = spread * this.speed;
-    this.spreadX = (Math.random() - 0.5) * this.spread - this.mx;
-    this.spreadY = (Math.random() - 0.5) * this.spread - this.my;
-    this.color = `hsl(${hue}deg 90% 60%)`;
-  }
-
-  draw() {
-    this.ctx.fillStyle = this.color;
-    this.ctx.beginPath();
-    this.ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-    this.ctx.fill();
-  }
-
-  collapse() {
-    this.size -= this.decay;
-  }
-
-  trail() {
-    this.x += this.spreadX * this.size;
-    this.y += this.spreadY * this.size;
-  }
-
-  update() {
-    this.draw();
-    this.trail();
-    this.collapse();
-  }
-}
-
-class PointerParticles extends HTMLElement {
-  static register(tag = "pointer-particles") {
-    if ("customElements" in window) {
-      customElements.define(tag, this);
-    }
-  }
-
-  static css = `
-    :host {
-      display: grid;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
-    }
-  `;
-
-  constructor() {
-    super();
-
-    this.canvas;
-    this.ctx;
-    this.fps = 60;
-    this.msPerFrame = 1000 / this.fps;
-    this.timePrevious;
-    this.particles = [];
-    this.pointer = {
-      x: 0,
-      y: 0,
-      mx: 0,
-      my: 0
-    };
-    this.hue = 0;
-  }
-
-  connectedCallback() {
-    const canvas = document.createElement("canvas");
-    const sheet = new CSSStyleSheet();
-
-    this.shadowroot = this.attachShadow({ mode: "open" });
-
-    sheet.replaceSync(PointerParticles.css);
-    this.shadowroot.adoptedStyleSheets = [sheet];
-
-    this.shadowroot.append(canvas);
-
-    this.canvas = this.shadowroot.querySelector("canvas");
-    this.ctx = this.canvas.getContext("2d");
-    this.setCanvasDimensions();
-    this.setupEvents();
-    this.timePrevious = performance.now();
-    this.animateParticles();
-  }
-
-  createParticles(event, { count, speed, spread }) {
-    this.setPointerValues(event);
-
-    for (let i = 0; i < count; i++) {
-      this.particles.push(new PointerParticle(spread, speed, this));
-    }
-  }
-
-  // Modified setPointerValues to adjust the pointer relative to the canvas
-  setPointerValues(event) {
-    const rect = this.canvas.getBoundingClientRect(); // Get canvas position relative to the viewport
-    this.pointer.x = event.clientX - rect.left;       // Adjust pointer x relative to the canvas
-    this.pointer.y = event.clientY - rect.top;        // Adjust pointer y relative to the canvas
-    this.pointer.mx = event.movementX;
-    this.pointer.my = event.movementY;
-  }
-
-  setupEvents() {
-    const parent = this.parentNode;
-
-    parent.addEventListener("click", (event) => {
-      this.createParticles(event, {
-        count: 300,
-        speed: Math.random() + 1,
-        spread: Math.random() + 50
-      });
-    });
-
-    parent.addEventListener("pointermove", (event) => {
-      this.createParticles(event, {
-        count: 20,
-        speed: this.getPointerVelocity(event),
-        spread: 1
-      });
-    });
-
-    window.addEventListener("resize", () => this.setCanvasDimensions());
-  }
-
-  getPointerVelocity(event) {
-    const a = event.movementX;
-    const b = event.movementY;
-    const c = Math.floor(Math.sqrt(a * a + b * b));
-
-    return c;
-  }
-
-  handleParticles() {
-    for (let i = 0; i < this.particles.length; i++) {
-      this.particles[i].update();
-
-      if (this.particles[i].size <= 0.1) {
-        this.particles.splice(i, 1);
-        i--;
-      }
-    }
-  }
-
-  setCanvasDimensions() {
-    const rect = this.parentNode.getBoundingClientRect();
-
-    this.canvas.width = rect.width;
-    this.canvas.height = rect.height;
-  }
-
-  animateParticles() {
-    requestAnimationFrame(() => this.animateParticles());
-
-    const timeNow = performance.now();
-    const timePassed = timeNow - this.timePrevious;
-
-    if (timePassed < this.msPerFrame) return;
-
-    const excessTime = timePassed % this.msPerFrame;
-
-    this.timePrevious = timeNow - excessTime;
-
-    this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
-    this.hue = this.hue > 360 ? 0 : (this.hue += 3);
-
-    this.handleParticles();
-  }
-}
-
-PointerParticles.register();
-  </script>
     <!-- pain points -->
-  <div class="container">
+  <div class="pain-point-container">
     <h2 style= "text-align: center;
     margin-bottom: 40px;
     font-size: 32px; margin-top: 40px;" >Are You Experiencing Any Of This?</h2>
   <div class="card-container">
         <div class="card">
             <img src="https://i.ibb.co/rxm4Lvy/tick.png" alt="Icon" style="background-color: #ff6f61; border-radius: 50%; padding: 10px;">
-            <h3 style="margin-bottom: 25px;">Struggling with Ad Targeting?</h3> <br> 
-            <p>Is your ad spend not reaching the right people? You might be hitting a broad audience that’s not interested in what you offer, wasting valuable resources without seeing the results you need.</p>
+            <h3 >Stuck as the Bottleneck</h3> 
+            <p>You’re trapped in the center of every decision, every call, every marketing tweak. Your business relies on you to function, leaving you feeling exhausted and stretched thin. You know scaling is impossible when you’re the one holding everything together.</p>
         </div>
         <div class="card">
             <img src="https://i.ibb.co/rxm4Lvy/tick.png" alt="Icon" style="background-color: #ff6f61; border-radius: 50%; padding: 10px;">
-            <h3>Frustrated by Ineffective Ad Creative?</h3>
-            <p>Are your ads failing to capture attention or drive action? If your visuals and messaging aren’t engaging, your audience might not even notice your ads, let alone act on them.</p>
+            <h3>An Unpredictable Sales Pipeline</h3>
+            <p>Your revenue depends on inconsistent leads and unpredictable sales calls, leading to stress, frustration, and unsteady growth. Without a streamlined system that reliably attracts high-quality prospects, you’re forced to spend more time (and money) just to hit revenue goals.</p>
         </div>
         <div class="card">
             <img src="https://i.ibb.co/rxm4Lvy/tick.png" alt="Icon" style="background-color: #ff6f61; border-radius: 50%; padding: 10px;">
-            <h3>Confused by Inadequate Tracking and Analytics?</h3>
-            <p>Are you missing crucial insights about your ad performance? Without the right data, it’s hard to pinpoint what’s working and what’s not, leaving you in the dark about how to improve your campaigns.</p>
+            <h3>Unqualified Leads, Wasted Calls</h3>
+            <p>Most of the calls on your calendar are with unqualified prospects who aren’t serious buyers. The time you’re spending with unfit leads drains your energy and brings you little to no return, while the clients you do want remain out of reach.</p>
+        </div>
+        <div class="card">
+            <img src="https://i.ibb.co/rxm4Lvy/tick.png" alt="Icon" style="background-color: #ff6f61; border-radius: 50%; padding: 10px;">
+            <h3 >Reliance on a Single Sales Channel that Isn’t Working</h3>  
+            <p>You’re putting all your efforts into one or two sales channels, yet they’re not moving the needle. With outdated or piecemeal strategies, you’re leaving potential revenue on the table and missing out on the consistent lead flow that an integrated approach could bring.</p>
+        </div>
+        <div class="card">
+            <img src="https://i.ibb.co/rxm4Lvy/tick.png" alt="Icon" style="background-color: #ff6f61; border-radius: 50%; padding: 10px;">
+            <h3>Underperforming Team and Agency Support</h3>
+            <p>Whether it’s your internal team or external agencies, the results they’re delivering don’t match the investment. Miscommunication, lack of expertise, or half-hearted strategies mean your business isn’t progressing as it should, leaving you frustrated and constantly filling in the gaps.</p>
+        </div>
+        <div class="card">
+            <img src="https://i.ibb.co/rxm4Lvy/tick.png" alt="Icon" style="background-color: #ff6f61; border-radius: 50%; padding: 10px;">
+            <h3>No Trust-Building System Before the Call</h3>
+            <p>You’re forced to rely on the sales call to establish trust, but today’s buyers need to trust you before they even consider booking a call. Without a cohesive system that nurtures trust at each touchpoint, you’re losing high-value leads and facing no-shows, hesitations, and lost deals.</p>
         </div>
     </div>
     </div>
+
+    <!-- Why_Choose_Us Section -->
+    <section id="Why_Choose_Us" class="Why_Choose_Us">
+        <div class="Why_Choose_Us_container">
+            <h2 style= "text-align: center;
+    margin-bottom: 40px;
+    font-size: 32px; margin-top: 40px;">Why Choose Me?</h2>
+   
+    <p style= "text-align: left;
+    margin-bottom: 40px;
+    font-size: 20px; margin-top: 40px;">In today’s competitive market, having a great service isn’t enough. You need a marketing system that consistently delivers ready-to-buy clients directly to your calendar. The ClientBridge Framework is designed specifically for service-based businesses like yours to drive qualified leads without the hassle.</p>
+
+    <p style= "text-align: left;
+    margin-bottom: 40px;
+    font-size: 20px; margin-top: 40px;">My done-for-you marketing system includes everything you need to attract, nurture, and convert leads—all tailored to your business’s unique needs.</p>
+            <div class="Why_Choose_Us-steps">
+                <div class="Why_Choose_Us-step">
+                    <i class="fas fa-project-diagram Why_Choose_Us-icon"></i>
+                    <h3>End-to-End Solution</h3>
+                    <p>Custom sales funnel design, ad copy, email campaigns, video sales letters, and more.</p>
+                </div>
+                <div class="Why_Choose_Us-step">
+                    <i class="fas fa-bullseye Why_Choose_Us-icon"></i>
+                    <h3>Qualified Leads Only</h3>
+                    <p>I use targeted advertising and retargeting to ensure leads are ready to book a call.</p>
+                </div>
+                <div class="Why_Choose_Us-step">
+                    <i class="fas fa-award Why_Choose_Us-icon"></i>
+                    <h3>Proven Results</h3>
+                    <p>The Clientbridge Framework is modeled after the exact frameworks used by industry leaders such as Ryan Pineda, Jeremy Miner, and Ali Abdaal.</p>
+                </div>
+                
+            </div>
+        </div>
+    </section>
   
+     <!-- The ClientBridge Framework – How It Works -->
+    <section id="Why_Choose_Us" class="clientbridge">
+        <div class="clientbridge_container">
+            <h2 style= "text-align: center;
+    margin-bottom: 40px;
+    font-size: 32px; margin-top: 40px;">My three-step process is built to maximize lead quality and consistency.</h2>
+   
+    
+
+    
+            <div class="clientbridge-steps">
+                <div class="clientbridge-step">
+                    <img src="https://i.ibb.co/zRNrmvg/number-1.png" alt="Icon" style="background-color: #ff6f61; border-radius: 50%; "><!-- Step 1 -->
+                    <h3>Targeted Lead Attraction</h3>
+                    <p>I write high-converting ad copy, video sales letters, and social media scripts tailored specifically to your ideal client. No generic templates—everything is custom-built to resonate and compel action.</p>
+                </div>
+                <div class="clientbridge-step">
+                    <img src="https://i.ibb.co/4tmpXRy/number-2.png" alt="Icon" style="background-color: #ff6f61; border-radius: 50%; "> <!-- Step 2 -->
+                    <h3>Automated Lead Nurturing</h3>
+                    <p>Advanced email marketing sequences and sales funnels educate and nurture your leads, moving them closer to booking a call. By the time they reach you, they’re primed for that final conversation.</p>
+                </div>
+                <div class="clientbridge-step">
+                    <img src="https://i.ibb.co/WxbTHPq/number-3.png" alt="Icon" style="background-color: #ff6f61; border-radius: 50%; "> <!-- Step 3 -->
+                    <h3>Predictable Sales Calls</h3>
+                    <p>My Facebook ad management targets and retargets interested prospects, driving them to a conversion-optimized landing page. With tracking software and automation, you’ll never worry about an empty calendar again.</p>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
     <!-- Our Expertise Section -->
     <section id="our-expertise" class="our-expertise">
         <div class="container">
             <h2 style= "text-align: center;
     margin-bottom: 40px;
-    font-size: 32px; margin-top: 40px;">Our Expertise</h2>
+    font-size: 32px; margin-top: 40px;">Everything You Need to Scale Your Business – All in One Done-For-You Solution</h2>
             <div class="expertise-content">
                 <div class="expertise-item">
-                    <i class="fas fa-laptop-code"></i>
-                    <p><strong>Website Copywriting & SEO Optimization:</strong> Your website is the cornerstone of your online presence. We craft clear, persuasive, and SEO-optimized web copy that tells your brand’s story while boosting your site's visibility and driving conversions.</p>
+                    <i class="fas fa-chart-line"></i>
+                    <p><strong>Custom Sales Funnel:</strong> My tailored sales funnels convert visitors into high-quality leads, targeting and qualifying the right audience from the outset. Spend more time with prospects who are genuinely ready to buy.</p>
                 </div>
                 <div class="expertise-item">
-                    <i class="fa fa-pencil-alt"></i>
-                    <p><strong>Content Strategy & Blogging:</strong> Consistent, high-quality content is essential for building authority and driving traffic. We develop comprehensive content strategies and write SEO-optimized blog posts that engage your audience and support your digital marketing goals.</p>
+                    <i class="fas fa-video"></i>
+                    <p><strong>Engaging Content and Video Sales Letters (VSLs):</strong> I write compelling content scripts and VSLs that resonate with your target market, building trust and addressing their needs. These messages are designed to prompt action, priming leads before they even speak with you.</p>
                 </div>
                 <div class="expertise-item">
-                    <i class="fa fa-envelope-open-text"></i>
-                    <p><strong>Email Marketing Campaigns:</strong> Email remains one of the most powerful tools for nurturing leads and increasing sales. We create compelling, action-oriented email copy, from welcome sequences to promotions, that engages readers and drives conversions.</p>
+                    <i class="fas fa-envelope-open-text"></i>
+                    <p><strong>Automated Email Campaigns and Lead Nurturing:</strong> My email campaigns educate and nurture leads automatically, ensuring they’re engaged and informed. By the time they reach you, they’re familiar with your brand and ready for a meaningful sales conversation.</p>
                 </div>
                 <div class="expertise-item">
-                    <i class="fas fa-tags"></i>
-                    <p><strong>Product Descriptions:</strong> Great products deserve equally great descriptions. We write clear, engaging, and SEO-friendly product descriptions that highlight key features and benefits, making them appealing to potential buyers and improving search visibility.</p>
+                    <i class="fas fa-bullhorn"></i>
+                    <p><strong>Facebook Ad Management:</strong> Generate a steady stream of qualified leads through expertly managed Facebook ad campaigns. From ad creation to audience targeting and optimization, I handle everything to ensure your ad spend yields high-quality prospects.</p>
                 </div>
                 <div class="expertise-item">
-                    <i class="fa fa-bullhorn"></i>
-                    <p><strong>Social Media Copywriting & Ad Management:</strong> We craft engaging, brand-aligned copy for your social media channels, ensuring your message resonates across platforms. In addition, we create and manage high-converting Facebook and Instagram ads that target the right audience, driving engagement, traffic, and sales.</p>
+                    <i class="fas fa-chart-pie"></i>
+                    <p><strong>Real-Time Tracking Software:</strong> I use advanced tracking software to provide real-time insights into campaign performance, helping you see what’s working and where to optimize, so you can make data-driven decisions that improve ROI.</p>
+
                 </div>
                 <div class="expertise-item">
-                    <i class="fa fa-chart-line"></i>
-                    <p><strong>SEO & PPC Copywriting:</strong> Our SEO copywriting helps you rank higher on search engines, while our PPC (pay-per-click) ad copy drives instant results. We combine creative writing with digital marketing insights to create compelling content that attracts organic traffic and gets the most out of your paid advertising campaigns.</p>
+                    <i class="fas fa-cogs"></i>
+                    <p><strong>Automation Software for Seamless Lead Nurturing:</strong> Every touchpoint, from lead capture to follow-up emails, is managed through advanced automation tools I use, ensuring consistent communication with your leads without manual effort.</p>
                 </div>
             </div>
+            
         </div>
     </section>
 
@@ -721,14 +820,14 @@ PointerParticles.register();
         <div class="container">
             <h1 style= "text-align: center;
     margin-bottom: 40px;
-    font-size: 32px; margin-top: 40px;">About Us</h1>
+    font-size: 32px; margin-top: 40px;">About Me</h1>
             <div class="about-content">
                 <div class="about-text"><br>
-                    <p>Welcome to Alenwrites, a digital marketing service dedicated to helping brands establish and grow their online presence. I’m Alen, the sole strategist and creative force behind Alenwrites, working closely with each client to craft tailored strategies that drive engagement and success. With a focus on personal attention and customized solutions, I aim to provide a level of service that large agencies simply can’t offer.</p><br>
+                    <p>Hi, I’m Alen. While I may be new to the industry, I’ve dedicated myself to mastering the art of building effective marketing systems for businesses. After extensive learning and hands-on practice, I’ve developed a done-for-you marketing system that helps businesses generate 5 to 10 qualified sales calls per day. From crafting compelling ad copy to managing Facebook ad campaigns, I’ve honed the skills needed to bring qualified leads directly to you.</p><br>
 
-</p>At Alenwrites, I don’t believe in one-size-fits-all approaches. Every brand has its own story, and I’m here to help you tell yours effectively through strategies that include search engine optimization, social media marketing, content creation, and paid advertising. I take the time to understand your business goals and target audience, ensuring that every campaign is designed to resonate and deliver results.</p><br>
+</p>I know how frustrating it can be to struggle with marketing efforts that don’t yield results. That’s why I created the ClientBridge Framework—a comprehensive marketing system designed to automate your lead generation and ensure you’re always booked with clients who are ready to buy. I handle all the technical work, so you can focus on closing sales.</p><br>
 
-<p>Working as a solo digital marketing professional allows me to offer a unique blend of flexibility, agility, and personal commitment to your brand’s success. From strategy development to execution, you’ll have a dedicated partner by your side, focused on turning your digital presence into a key driver of growth and engagement.</p><br>
+<p>Even though I’m just starting out, I’m committed to helping businesses grow by providing them with a personalized, results-driven system tailored to their needs. My mission is to help you stop chasing leads and start closing them with a marketing system that works.</p><br>
 
 
                    
@@ -739,7 +838,7 @@ PointerParticles.register();
 
     
     
-<!-- Process Section -->
+<!-- Process Section 
     <section id="process" class="process">
         <div class="container">
             <h2 style= "text-align: center;
@@ -774,40 +873,48 @@ PointerParticles.register();
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <!-- Call to Action Section -->
     <section id="cta" class="cta">
         <div class="container">
-            <h2>Ready to Elevate Your Brand?</h2>
-            <p>No obligations, just a friendly chat to discuss your needs and how we can help.</p>
-            <a href="https://calendly.com/contact-alenwrites/consultation-call" class="primary-button" target="_blank">Schedule a Consultation</a>
+            <h2>Don’t let another day pass with an empty calendar. Every day you delay, your competition gets stronger.</h2>
+            <p>Ready to Stop Chasing Leads and Start Closing Them? Let’s Get You Booked Solid with My Done-For-You System.</p>
+            <a href="https://calendly.com/contact-alenwrites/consultation-call" class="primary-button" target="_blank">Schedule Your Strategy Call</a>
             <!--<a href="#contact" class="secondary-button">Download Explainer PDF</a> -->
         </div>
     </section>
 
     <!-- Footer -->
-    <footer>
-  <div class="footer-container">
-    <div class="left-section">
-      <div class="footer-logo">
-                    <img src="https://i.ibb.co/tQkG6d5/Photo-Room-20240918-185350-transformed.png" alt="Your Company Name Logo">
-                </div>
+    <footer class="footer">
+    <div class="footer-container">
+        <!-- Logo on the left side -->
+        <div class="footer-logo">
+            <img src="https://i.ibb.co/tQkG6d5/Photo-Room-20240918-185350-transformed.png" alt="Company Logo">
+        </div>
+
+        <!-- Centered Navigation Links -->
+        <div class="footer-nav">
+            <a href="#about">About</a>
+           <!-- <a href="#testimonials">Testimonials</a> -->
+           <!-- <a href="#case-studies">Case Studies</a> -->
+           <!--<a href="#privacy-policy">Privacy Policy</a> -->
+            <a href="mailto:contact@alenwrites.pro">Contact</a>
+        </div>
+
+        <!-- Social Links on the right side -->
+        <div class="footer-social">
+            <a href="https://www.linkedin.com/in/alen-praveen?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BQ8gtdYUbQKyea6TJmLpm%2Fg%3D%3D" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://x.com/Alenwrites" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.youtube.com/@AlenPPraveen" target="_blank"><i class="fab fa-youtube"></i></a>
+            <a href="https://instagram.com/alenwrites.pro" target="_blank"><i class="fab fa-instagram"></i></a>
+
+            </div>
     </div>
-    <div class="right-section">
-      <ul>
-        <li><a href="#about">About Us</a></li>
-        <li><a href="mailto:contact@alenwrites.pro">Contact Us</a></li>
-        <li> <a href="https://www.instagram.com/alenwrites/?hl=en" target="_blank">Instagram</a></li>
-      </ul>
-    </div>
-  </div>
-<!-- Bottom copyright section -->
-  <div class="bottom-footer">
-    <p>© 2024 Alenwrites. All rights reserved.</p>
-  </div>
-  
 </footer>
 
+
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'8de17a557b724725',t:'MTczMDg1ODMwMC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"8de17a557b724725","version":"2024.10.4","r":1,"token":"dfe3a3ff1e5d48d0bd5869f26e4e13b1","serverTiming":{"name":{"cfExtPri":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}}}' crossorigin="anonymous"></script>
 </body>
 </html>
